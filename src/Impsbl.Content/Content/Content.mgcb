@@ -5,10 +5,12 @@
 /platform:DesktopGL
 /config:
 /profile:Reach
-/compress:False
+/compress:True
 
 #-------------------------------- References --------------------------------#
 
+/reference:../../Impsbl.Infrastructure.Spritesheets/bin/Debug/netcoreapp3.1/Impsbl.Infrastructure.Spritesheets.dll
+/reference:../../Impsbl.Infrastructure.Spritesheets/bin/Release/netcoreapp3.1/Impsbl.Infrastructure.Spritesheets.dll
 
 #---------------------------------- Content ---------------------------------#
 
@@ -20,8 +22,20 @@
 /build:Fonts/Default.spritefont
 
 #begin Textures/Hero/Spritesheet.png
+# /importer:TextureImporter
+# /processor:TextureProcessor
+# /processorParam:ColorKeyColor=255,0,255,255
+# /processorParam:ColorKeyEnabled=True
+# /processorParam:GenerateMipmaps=False
+# /processorParam:PremultiplyAlpha=True
+# /processorParam:ResizeToPowerOfTwo=False
+# /processorParam:MakeSquare=False
+# /processorParam:TextureFormat=Color
+# /build:Textures/Hero/Spritesheet.png
+
+#begin Overworld.png
 /importer:TextureImporter
-/processor:TextureProcessor
+/processor:GridSheetProcessor
 /processorParam:ColorKeyColor=255,0,255,255
 /processorParam:ColorKeyEnabled=True
 /processorParam:GenerateMipmaps=False
@@ -29,4 +43,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
+/processorParam:SpriteWidth=1050
+/processorParam:SpriteHeight=1050
+/processorParam:Padding=0
 /build:Textures/Hero/Spritesheet.png

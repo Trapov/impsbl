@@ -30,7 +30,12 @@ namespace Impsbl
             GraphicsDeviceManager.GraphicsDevice.Clear(Color.AliceBlue);
 
             SpriteBatch.Begin(samplerState: SamplerState.PointClamp);
-            SpriteBatch.Draw(Hero.CurrentStateTexture, new Rectangle(Hero.Coordinate.X, Hero.Coordinate.Y, 150, 150), Color.White);
+            SpriteBatch.Draw(
+                Hero.CurrentStateTexture.Texture,
+                new Rectangle((int) Hero.CurrentStateTexture.Vector.X, (int) Hero.CurrentStateTexture.Vector.Y , 150, 150),
+                Hero.CurrentStateTexture.Rectangle,
+                Hero.CurrentStateTexture.Color
+            );
             SpriteBatch.End();
         }
 
